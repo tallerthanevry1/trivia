@@ -1,3 +1,9 @@
+// https://cdn.contentful.com
+// space: 'cp3306uz387z',
+// environment: 'master', // defaults to 'master' if not set
+// accessToken: 'tvFfxpfCDZrvZneWYvv6UJJ7NajgUsJ-b4hFNQVHask'
+
+
 
 //******************** */
 // APP STATE
@@ -78,6 +84,6 @@ $.ajax(URL)
     console.log(data)
     console.log(questions)
 
-    setBoard(question)
+    setBoard(questions)
     
 })
