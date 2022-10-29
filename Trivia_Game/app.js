@@ -57,9 +57,9 @@ const setBoard = (q) => {
     // Getting a random question
     const randomIndex = Math.floor(Math.random() * q.length)
     const randomQuestion = q[randomIndex]
-
+    console.log(randomQuestion)
     //Update question
-    $question.text(randomQuestion.question)
+    $question.text(randomQuestion.questions)
     $a.text(randomQuestion.a)
     $b.text(randomQuestion.b)
     $c.text(randomQuestion.c)
@@ -77,7 +77,7 @@ const setBoard = (q) => {
 
 // Main App Logic
 
-const URL ="https://cdn.contentful.com/spaces/cp3306uz387z/environments/master/entries?access_token=tvFfxpfCDZrvZneWYvv6UJJ7NajgUsJ-b4hFNQVHask&content_type=triviaQs"
+const URL ="https://cdn.contentful.com/spaces/cp3306uz387z/environments/master/entries?access_token=lZJNAYjhNu6iK5QX0e7oQUtyniE2jrUYL_DFbpKvvCA&content_type=triviaQs"
 $.ajax(URL)
 .then((data) => {
     questions = data.items.map((q) => q.fields)
